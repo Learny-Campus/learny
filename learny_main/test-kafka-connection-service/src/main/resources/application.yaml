@@ -1,0 +1,9 @@
+spring:
+  kafka:
+    bootstrap-servers: localhost:9092
+    topics:
+      student-auth-token: "student-auth-token"
+      teacher-auth-token: "teacher-auth-token"
+
+server:
+  port: 8081
