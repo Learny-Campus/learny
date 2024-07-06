@@ -12,6 +12,11 @@
           <package value="com.example.linkservice" />
         </packages>
       </persistence-unit>
+      <persistence-unit moduleName="com.example.auth-service.main" name="Default">
+        <packages>
+          <package value="com.example.authservice" />
+        </packages>
+      </persistence-unit>
     </persistence-units>
   </component>
 </project>

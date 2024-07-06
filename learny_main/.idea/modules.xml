@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/auth-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/auth-service.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/link-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/link-service.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.example.auth-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/com.example.auth-service.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.example.link-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/com.example.link-service.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.example.link-service.main~1.iml" filepath="$PROJECT_DIR$/.idea/modules/com.example.link-service.main~1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/link-service.iml" filepath="$PROJECT_DIR$/.idea/modules/link-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/link-service.test.iml" filepath="$PROJECT_DIR$/.idea/modules/link-service.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/schedule-service/schedule-service.iml" filepath="$PROJECT_DIR$/schedule-service/schedule-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/schedule-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/schedule-service.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/schedule-service.test.iml" filepath="$PROJECT_DIR$/.idea/modules/schedule-service.test.iml" />
     </modules>
   </component>
 </project>
