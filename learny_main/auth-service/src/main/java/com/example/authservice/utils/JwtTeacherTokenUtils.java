@@ -22,12 +22,9 @@ public class JwtTeacherTokenUtils {
     @Value("${jwt.student_secret_lifetime}")
     private Duration teacherSecretLifetime;
 
-    public String generationTeacherToken(UserDetails userDetails) {
+    public String generateTeacherToken(UserDetails userDetails, String role) {
         Map<String, Object> claims = new HashMap<>();
-        List<String> roleList = userDetails.getAuthorities().stream()
-                .map(GrantedAuthority::getAuthority)
-                .toList();
-        claims.put("roles", roleList);
+        claims.put("roles", List.of(role));
 
         Date issuedDate = new Date();
         Date expirationDate = new Date(issuedDate.getTime() + getTeacherSecretLifetime().toMillis());
@@ -57,7 +54,24 @@ public class JwtTeacherTokenUtils {
         }
     }
 
-    public String getTeacherUsername(String token) { return getAllClaimsFromTeacherToken(token).getSubject(); }
+    public String getTeacherUsername(String token) {
+        return getAllClaimsFromTeacherToken(token).getSubject();
+    }
 
-    public List getRoles(String token) { return getAllClaimsFromTeacherToken(token).get("roles", List.class); }
+    public List<String> getRoles(String token) {
+        return getAllClaimsFromTeacherToken(token).get("roles", List.class);
+    }
+
+    public String getFirstRole(String token) {
+        List<String> roles = getRoles(token);
+        if (roles != null && !roles.isEmpty()) {
+            return roles.getFirst();
+        }
+        return null; // или выбросить исключение, если роли нет
+    }
+
+    public boolean hasRole(String token, String role) {
+        List<String> roles = getRoles(token);
+        return roles != null && roles.contains(role);
+    }
 }

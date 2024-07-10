@@ -17,6 +17,11 @@
           <package value="com.example.authservice" />
         </packages>
       </persistence-unit>
+      <persistence-unit moduleName="com.learny.schedule-service.main" name="Default">
+        <packages>
+          <package value="com.learny.scheduleservice" />
+        </packages>
+      </persistence-unit>
     </persistence-units>
   </component>
 </project>

@@ -13,6 +13,6 @@ public class TeacherRegistrationDto {
     private String password;
     private String confirmPassword;
     private String email;
-    private String degree;
     private int index;
+    private String degree;
 }

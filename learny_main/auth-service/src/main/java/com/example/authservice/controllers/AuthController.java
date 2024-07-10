@@ -31,17 +31,24 @@ public class AuthController {
 
     @PostMapping("/logging/student")
     public ResponseEntity<?> authenticateStudent(@RequestBody JwtRequest authRequest) {
+        authRequest.setRole("STUDENT");
         ResponseEntity<?> response = authService.createAuthToken("student", authRequest);
         if (response.getStatusCode().is2xxSuccessful() && response.getBody() instanceof JwtResponse) {
             JwtResponse jwtResponse = (JwtResponse) response.getBody();
-            kafkaProducer.send(authRequest.getUsername(), jwtResponse.getToken());
+            kafkaProducer.send(authRequest.getUsername(),jwtResponse.getToken());
         }
         return response;
     }
 
     @PostMapping("/logging/teacher")
     public ResponseEntity<?> authenticateTeacher(@RequestBody JwtRequest authRequest) {
-        return authService.createAuthToken("teacher", authRequest);
+        authRequest.setRole("TEACHER");
+        ResponseEntity<?> response = authService.createAuthToken("teacher", authRequest);
+        if (response.getStatusCode().is2xxSuccessful() && response.getBody() instanceof JwtResponse) {
+            JwtResponse jwtResponse = (JwtResponse) response.getBody();
+            kafkaProducer.send(authRequest.getUsername(), jwtResponse.getToken());
+        }
+        return response;
     }
 
     @GetMapping("/info")
