@@ -19,6 +19,9 @@ public class AuthController {
     private final AuthService authService;
     private final KafkaProducer kafkaProducer;
 
+    //TODO: разобраться почему студенты могут авторизоваться как преподаватели и наоборот.
+
+
     @PostMapping("/registration/student")
     public ResponseEntity<?> registerStudent(@RequestBody StudentRegistrationDto studentRegistrationDto) {
         return authService.createUser("student", studentRegistrationDto);
@@ -54,4 +57,3 @@ public class AuthController {
         return principal.getName();
     }
 }
-
