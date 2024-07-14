@@ -32,20 +32,18 @@ public class AuthController {
     @PostMapping("/logging/student")
     public ResponseEntity<?> authenticateStudent(@RequestBody JwtRequest authRequest) {
         authRequest.setRole("STUDENT");
-        ResponseEntity<?> response = authService.createAuthToken("student", authRequest);
-        if (response.getStatusCode().is2xxSuccessful() && response.getBody() instanceof JwtResponse) {
-            JwtResponse jwtResponse = (JwtResponse) response.getBody();
-            kafkaProducer.send(authRequest.getUsername(),jwtResponse.getToken());
-        }
-        return response;
+        return authenticateUser("student", authRequest);
     }
 
     @PostMapping("/logging/teacher")
     public ResponseEntity<?> authenticateTeacher(@RequestBody JwtRequest authRequest) {
         authRequest.setRole("TEACHER");
-        ResponseEntity<?> response = authService.createAuthToken("teacher", authRequest);
-        if (response.getStatusCode().is2xxSuccessful() && response.getBody() instanceof JwtResponse) {
-            JwtResponse jwtResponse = (JwtResponse) response.getBody();
+        return authenticateUser("teacher", authRequest);
+    }
+
+    private ResponseEntity<?> authenticateUser(String expectedRole, JwtRequest authRequest) {
+        ResponseEntity<?> response = authService.createAuthToken(expectedRole, authRequest);
+        if (response.getStatusCode().is2xxSuccessful() && response.getBody() instanceof JwtResponse jwtResponse) {
             kafkaProducer.send(authRequest.getUsername(), jwtResponse.getToken());
         }
         return response;

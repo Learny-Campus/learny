@@ -22,9 +22,12 @@ public class JwtTeacherTokenUtils {
     @Value("${jwt.student_secret_lifetime}")
     private Duration teacherSecretLifetime;
 
-    public String generateTeacherToken(UserDetails userDetails, String role) {
+    public String generationTeacherToken(UserDetails userDetails) {
         Map<String, Object> claims = new HashMap<>();
-        claims.put("roles", List.of(role));
+        List<String> roleList = userDetails.getAuthorities().stream()
+                .map(GrantedAuthority::getAuthority)
+                .toList();
+        claims.put("roles", roleList);
 
         Date issuedDate = new Date();
         Date expirationDate = new Date(issuedDate.getTime() + getTeacherSecretLifetime().toMillis());
