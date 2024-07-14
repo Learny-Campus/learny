@@ -1,0 +1,22 @@
+Index: .idea/compiler.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"CompilerConfiguration\">\r\n    <annotationProcessing>\r\n      <profile name=\"Gradle Imported\" enabled=\"true\">\r\n        <outputRelativeToContentRoot value=\"true\" />\r\n        <processorPath useClasspath=\"false\">\r\n          <entry name=\"$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.32/17d46b3e205515e1e8efd3ee4d57ce8018914163/lombok-1.18.32.jar\" />\r\n        </processorPath>\r\n        <module name=\"auth-service.main\" />\r\n      </profile>\r\n    </annotationProcessing>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/compiler.xml b/.idea/compiler.xml
+--- a/.idea/compiler.xml	(revision b6bc41fe0b8edfa6150089bfb303da7ba567a247)
++++ b/.idea/compiler.xml	(date 1720985834467)
+@@ -10,5 +10,10 @@
+         <module name="auth-service.main" />
+       </profile>
+     </annotationProcessing>
++    <bytecodeTargetLevel>
++      <module name="schedule-service" target="21" />
++      <module name="schedule-service.main" target="21" />
++      <module name="schedule-service.test" target="21" />
++    </bytecodeTargetLevel>
+   </component>
+ </project>
+\ No newline at end of file

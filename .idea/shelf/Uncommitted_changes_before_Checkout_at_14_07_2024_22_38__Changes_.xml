@@ -1,0 +1,29 @@
+<changelist name="Uncommitted_changes_before_Checkout_at_14_07_2024_22_38_[Changes]" date="1720989527942" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_07_2024_22_38_[Changes]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Checkout at 14.07.2024 22:38 [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="learny_main/auth-service/.gradle/file-system.probe" />
+    <option name="AFTER_PATH" value="learny_main/auth-service/.gradle/file-system.probe" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_07_2024_22_38_[Changes]/file-system.probe" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="learny_main/auth-service/.gradle/8.8/executionHistory/executionHistory.lock" />
+    <option name="AFTER_PATH" value="learny_main/auth-service/.gradle/8.8/executionHistory/executionHistory.lock" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_07_2024_22_38_[Changes]/executionHistory.lock" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="learny_main/auth-service/.gradle/8.8/fileHashes/fileHashes.lock" />
+    <option name="AFTER_PATH" value="learny_main/auth-service/.gradle/8.8/fileHashes/fileHashes.lock" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_07_2024_22_38_[Changes]/fileHashes.lock" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="learny_main/auth-service/.gradle/8.8/fileHashes/fileHashes.bin" />
+    <option name="AFTER_PATH" value="learny_main/auth-service/.gradle/8.8/fileHashes/fileHashes.bin" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_07_2024_22_38_[Changes]/fileHashes.bin" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="learny_main/auth-service/.gradle/buildOutputCleanup/buildOutputCleanup.lock" />
+    <option name="AFTER_PATH" value="learny_main/auth-service/.gradle/buildOutputCleanup/buildOutputCleanup.lock" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_07_2024_22_38_[Changes]/buildOutputCleanup.lock" />
+  </binary>
+</changelist>
