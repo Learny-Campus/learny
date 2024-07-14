@@ -1,0 +1,8 @@
+Step 1: To start Zookeeper, we can open a PowerShell prompt and execute the below command:
+
+.\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties
+
+Step 2: Now open another command prompt and change the directory to the kafka folder. Run kafka server using the command:
+
+.\bin\windows\kafka-server-start.bat .\config\server.properties
+

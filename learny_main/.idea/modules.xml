@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.example.auth-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/com.example.auth-service.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.example.link-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/com.example.link-service.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.example.link-service.main~2.iml" filepath="$PROJECT_DIR$/.idea/modules/com.example.link-service.main~2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/link-service.iml" filepath="$PROJECT_DIR$/.idea/modules/link-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/link-service.test.iml" filepath="$PROJECT_DIR$/.idea/modules/link-service.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/schedule-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/schedule-service.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/schedule-service.test.iml" filepath="$PROJECT_DIR$/.idea/modules/schedule-service.test.iml" />
+    </modules>
+  </component>
+</project>

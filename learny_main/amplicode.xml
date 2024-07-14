@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AmplicodePersistenceUnitSettings">
+    <persistence-units>
+      <persistence-unit moduleName="auth-service.main" name="Default">
+        <packages>
+          <package value="com.example.authservice" />
+        </packages>
+      </persistence-unit>
+      <persistence-unit moduleName="link-service.main" name="Default">
+        <packages>
+          <package value="com.example.linkservice" />
+        </packages>
+      </persistence-unit>
+      <persistence-unit moduleName="com.example.auth-service.main" name="Default">
+        <packages>
+          <package value="com.example.authservice" />
+        </packages>
+      </persistence-unit>
+      <persistence-unit moduleName="com.learny.schedule-service.main" name="Default">
+        <packages>
+          <package value="com.learny.scheduleservice" />
+        </packages>
+      </persistence-unit>
+    </persistence-units>
+  </component>
+</project>

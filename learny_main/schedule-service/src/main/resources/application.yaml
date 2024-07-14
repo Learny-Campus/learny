@@ -1,0 +1,32 @@
+server:
+  port: 8081
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/learny_schedule_service_db
+    username: postgres
+    password: 28859013
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+  kafka:
+    bootstrap-servers: localhost:9092
+    topics:
+      student-auth-token: "student-auth-token"
+      teacher-auth-token: "teacher-auth-token"
+
+
+  main:
+    allow-bean-definition-overriding: true
+    allow-circular-references: true
+
+jwt:
+  student_secret: s2v6asadsas1fsde1CSsaf2rewfas902u0aJWsgGIQ7382bfjafqfhqhfo
+  student_secret_lifetime: 10m
+
+  teacher_secret: 8a8CQHW8ad87a8DCVceDs8sdsdaVEN7eddssCaDbGYJHjbJW7388329SCJ
+  teacher_secret_lifetime: 20m

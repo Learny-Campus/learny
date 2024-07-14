@@ -1,0 +1,485 @@
+<mxfile host="app.diagrams.net" modified="2024-06-19T20:23:44.516Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="iPTI7djN40hnpt-cuvMB" version="24.5.5" type="device">
+  <diagram name="Page-1" id="z9QGjYGTWGTTBQzxNK9d">
+    <mxGraphModel dx="1736" dy="1939" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2000" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="XsvZXBz9a4h5eeezJBc0-1" value="Users" style="whiteSpace=wrap;html=1;aspect=fixed;fontSize=21;" parent="1" vertex="1">
+          <mxGeometry x="20" y="1525" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="XsvZXBz9a4h5eeezJBc0-2" value="" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;width=10.4;startSize=7.864;startWidth=19.68;endSize=7.864;" parent="1" source="XsvZXBz9a4h5eeezJBc0-1" target="XsvZXBz9a4h5eeezJBc0-3" edge="1">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="130" y="1545" as="sourcePoint" />
+            <mxPoint x="230" y="1445" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XsvZXBz9a4h5eeezJBc0-3" value="Unsecured Data" style="rounded=1;whiteSpace=wrap;html=1;fontSize=20;" parent="1" vertex="1">
+          <mxGeometry x="190" y="1532.5" width="150" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="XsvZXBz9a4h5eeezJBc0-5" value="Logging and authorization service" style="rounded=1;whiteSpace=wrap;html=1;fontSize=20;" parent="1" vertex="1">
+          <mxGeometry x="400" y="1527.5" width="150" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="XsvZXBz9a4h5eeezJBc0-7" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="XsvZXBz9a4h5eeezJBc0-3" target="XsvZXBz9a4h5eeezJBc0-5" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="1685" as="sourcePoint" />
+            <mxPoint x="430" y="1635" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XsvZXBz9a4h5eeezJBc0-8" value="Users&lt;br&gt;DB" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fontSize=20;" parent="1" vertex="1">
+          <mxGeometry x="660" y="1365" width="80" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="XsvZXBz9a4h5eeezJBc0-9" value="" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=1;entryDx=0;entryDy=-15;entryPerimeter=0;" parent="1" source="XsvZXBz9a4h5eeezJBc0-5" target="XsvZXBz9a4h5eeezJBc0-8" edge="1">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="590" y="1605" as="sourcePoint" />
+            <mxPoint x="690" y="1505" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XsvZXBz9a4h5eeezJBc0-11" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Запрос на БД&lt;/h1&gt;&lt;div&gt;Делает запрос на БД чтобы получить инфу есть ли данный пользователь в БД.&amp;nbsp;&lt;br&gt;&lt;br&gt;Если есть - логирование&lt;br&gt;&lt;/div&gt;&lt;div&gt;Если нет - регистрация&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="400" y="1355" width="180" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="XsvZXBz9a4h5eeezJBc0-12" value="User Service" style="rounded=1;whiteSpace=wrap;html=1;fontSize=20;" parent="1" vertex="1">
+          <mxGeometry x="800" y="1525" width="150" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="XsvZXBz9a4h5eeezJBc0-13" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;exitX=1;exitY=1;exitDx=0;exitDy=-15;exitPerimeter=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" parent="1" source="XsvZXBz9a4h5eeezJBc0-8" target="XsvZXBz9a4h5eeezJBc0-12" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="710" y="1575" as="sourcePoint" />
+            <mxPoint x="760" y="1525" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XsvZXBz9a4h5eeezJBc0-14" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;User Service&lt;/h1&gt;&lt;div&gt;Своего рода личный кабинет пользователя, где находится вся информация о нём.&amp;nbsp;&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="810" y="1405" width="180" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="XsvZXBz9a4h5eeezJBc0-15" value="Security notification service" style="rounded=1;whiteSpace=wrap;html=1;fontSize=20;" parent="1" vertex="1">
+          <mxGeometry x="600" y="1690" width="150" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="XsvZXBz9a4h5eeezJBc0-17" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Security Notification service&lt;/h1&gt;&lt;div&gt;Когда пользователь заходит в&amp;nbsp; свой кабинет - ему на почту приходит сообщение что в его личный кабинет был совершён вход.&amp;nbsp;&lt;br&gt;&lt;br&gt;(По возможности сделать отправку когда был вход и с какого устройства)&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="385" y="1645" width="180" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="XsvZXBz9a4h5eeezJBc0-19" value="Moodle Service Impl" style="rounded=1;whiteSpace=wrap;html=1;fontSize=20;" parent="1" vertex="1">
+          <mxGeometry x="1060" y="1370" width="150" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="XsvZXBz9a4h5eeezJBc0-21" value="" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;endWidth=6.419753086419753;endSize=6.439506172839506;startWidth=6.419753086419753;startSize=4.286419753086419;" parent="1" source="XsvZXBz9a4h5eeezJBc0-5" target="XsvZXBz9a4h5eeezJBc0-15" edge="1">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="650" y="1845" as="sourcePoint" />
+            <mxPoint x="750" y="1745" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XsvZXBz9a4h5eeezJBc0-22" value="" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="XsvZXBz9a4h5eeezJBc0-12" target="XsvZXBz9a4h5eeezJBc0-19" edge="1">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="1030" y="1560" as="sourcePoint" />
+            <mxPoint x="1130" y="1460" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XsvZXBz9a4h5eeezJBc0-23" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Moodle Service Impl&lt;/h1&gt;&lt;div&gt;(Временное название)&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Сервис, который будет иметь весь функционал мудла. Может немного изменённый.&amp;nbsp;&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="1030" y="1460" width="180" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="XsvZXBz9a4h5eeezJBc0-27" value="Courses Moodle" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;" parent="1" vertex="1">
+          <mxGeometry x="1350" y="1230" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="XsvZXBz9a4h5eeezJBc0-28" value="Schedule Moodle" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;" parent="1" vertex="1">
+          <mxGeometry x="1340" y="1345" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="XsvZXBz9a4h5eeezJBc0-30" value="Main page Moodle" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;" parent="1" vertex="1">
+          <mxGeometry x="1340" y="1467.5" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="XsvZXBz9a4h5eeezJBc0-31" value="" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="XsvZXBz9a4h5eeezJBc0-19" target="XsvZXBz9a4h5eeezJBc0-27" edge="1">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="1250" y="1650" as="sourcePoint" />
+            <mxPoint x="1350" y="1550" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XsvZXBz9a4h5eeezJBc0-32" value="" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="XsvZXBz9a4h5eeezJBc0-19" target="XsvZXBz9a4h5eeezJBc0-28" edge="1">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="1160" y="1530" as="sourcePoint" />
+            <mxPoint x="1260" y="1430" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XsvZXBz9a4h5eeezJBc0-33" value="" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="XsvZXBz9a4h5eeezJBc0-19" target="XsvZXBz9a4h5eeezJBc0-30" edge="1">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="1240" y="1640" as="sourcePoint" />
+            <mxPoint x="1340" y="1540" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XsvZXBz9a4h5eeezJBc0-36" value="Courses Moodle&amp;nbsp; DB" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fontSize=20;" parent="1" vertex="1">
+          <mxGeometry x="1580" y="1160" width="80" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="XsvZXBz9a4h5eeezJBc0-37" value="" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=35;entryPerimeter=0;" parent="1" source="XsvZXBz9a4h5eeezJBc0-27" target="XsvZXBz9a4h5eeezJBc0-36" edge="1">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="1540" y="1440" as="sourcePoint" />
+            <mxPoint x="1640" y="1340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XsvZXBz9a4h5eeezJBc0-38" value="Schedule Moodle DB" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fontSize=20;" parent="1" vertex="1">
+          <mxGeometry x="1570" y="1320" width="90" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="XsvZXBz9a4h5eeezJBc0-39" value="" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=35;entryPerimeter=0;" parent="1" source="XsvZXBz9a4h5eeezJBc0-28" target="XsvZXBz9a4h5eeezJBc0-38" edge="1">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="1470" y="1510" as="sourcePoint" />
+            <mxPoint x="1570" y="1410" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XsvZXBz9a4h5eeezJBc0-40" value="Main Page Moodle DB" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fontSize=20;" parent="1" vertex="1">
+          <mxGeometry x="1575" y="1460" width="80" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="XsvZXBz9a4h5eeezJBc0-41" value="" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=35;entryPerimeter=0;" parent="1" source="XsvZXBz9a4h5eeezJBc0-30" target="XsvZXBz9a4h5eeezJBc0-40" edge="1">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="1400" y="1700" as="sourcePoint" />
+            <mxPoint x="1500" y="1600" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XsvZXBz9a4h5eeezJBc0-42" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=14;spacing=2;strokeWidth=3;" parent="1" source="XsvZXBz9a4h5eeezJBc0-40" target="XsvZXBz9a4h5eeezJBc0-36" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1720" y="1545" />
+              <mxPoint x="1720" y="1205" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XsvZXBz9a4h5eeezJBc0-43" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Moodle Service Impl&lt;/h1&gt;&lt;div&gt;Разбиение на подсервисы основного сервиса. Каждый подсервис отвечает за свою часть общего сервиса и имеет свою БД&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="1140" y="1130" width="180" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="XsvZXBz9a4h5eeezJBc0-44" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Связь&lt;/h1&gt;&lt;div&gt;Связь между Courses Moodle DB и Main Page Moodle DB нужна когда на главной странице будет производится поиск нужных студенту предметов и выбранный студентом предмет будет автоматически пробрасываться в его личный кабинет на Moodle Impl&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="1710" y="1010" width="200" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="XsvZXBz9a4h5eeezJBc0-45" value="Usos Service Impl" style="rounded=1;whiteSpace=wrap;html=1;fontSize=20;" parent="1" vertex="1">
+          <mxGeometry x="1060" y="1725" width="150" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="XsvZXBz9a4h5eeezJBc0-47" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0;entryDx=0;entryDy=15;entryPerimeter=0;strokeWidth=3;" parent="1" source="XsvZXBz9a4h5eeezJBc0-27" target="XsvZXBz9a4h5eeezJBc0-8" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1330" y="1300" />
+              <mxPoint x="1035" y="1300" />
+              <mxPoint x="1035" y="1380" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XsvZXBz9a4h5eeezJBc0-48" value="" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" parent="1" source="XsvZXBz9a4h5eeezJBc0-12" target="XsvZXBz9a4h5eeezJBc0-45" edge="1">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="910" y="1770" as="sourcePoint" />
+            <mxPoint x="1010" y="1670" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XsvZXBz9a4h5eeezJBc0-49" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=0.855;entryY=1;entryDx=0;entryDy=-4.35;entryPerimeter=0;strokeWidth=3;" parent="1" source="XsvZXBz9a4h5eeezJBc0-45" target="XsvZXBz9a4h5eeezJBc0-8" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="940" y="1774" />
+              <mxPoint x="940" y="1620" />
+              <mxPoint x="728" y="1620" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XsvZXBz9a4h5eeezJBc0-50" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Связь&lt;/h1&gt;&lt;div&gt;Связь между Courses Moodle и Users DB нужна чтобы отображать студентов на определённом курсе и отображать их последнее время захода&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="800" y="1235" width="180" height="145" as="geometry" />
+        </mxCell>
+        <mxCell id="XsvZXBz9a4h5eeezJBc0-51" value="Schedule Service" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;" parent="1" vertex="1">
+          <mxGeometry x="1330" y="1630" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="XsvZXBz9a4h5eeezJBc0-52" value="Service &quot;For students&quot;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;" parent="1" vertex="1">
+          <mxGeometry x="1330" y="1727.5" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="XsvZXBz9a4h5eeezJBc0-54" value="" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="XsvZXBz9a4h5eeezJBc0-45" target="XsvZXBz9a4h5eeezJBc0-51" edge="1">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="1160" y="1960" as="sourcePoint" />
+            <mxPoint x="1260" y="1860" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XsvZXBz9a4h5eeezJBc0-55" value="" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="XsvZXBz9a4h5eeezJBc0-45" target="XsvZXBz9a4h5eeezJBc0-52" edge="1">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="1220" y="1765" as="sourcePoint" />
+            <mxPoint x="1340" y="1700" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XsvZXBz9a4h5eeezJBc0-57" value="Schedule Service DB" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fontSize=20;" parent="1" vertex="1">
+          <mxGeometry x="1570" y="1600" width="90" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="XsvZXBz9a4h5eeezJBc0-58" value="" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="XsvZXBz9a4h5eeezJBc0-51" target="XsvZXBz9a4h5eeezJBc0-57" edge="1">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="1520" y="1870" as="sourcePoint" />
+            <mxPoint x="1620" y="1770" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XsvZXBz9a4h5eeezJBc0-59" value="" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="XsvZXBz9a4h5eeezJBc0-5" target="XsvZXBz9a4h5eeezJBc0-12" edge="1">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="650" y="1640" as="sourcePoint" />
+            <mxPoint x="750" y="1540" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XsvZXBz9a4h5eeezJBc0-62" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;fillColor=#fa6800;strokeColor=#C73500;strokeWidth=3;" parent="1" source="XsvZXBz9a4h5eeezJBc0-60" target="XsvZXBz9a4h5eeezJBc0-5" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XsvZXBz9a4h5eeezJBc0-63" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;fillColor=#fa6800;strokeColor=#C73500;strokeWidth=3;" parent="1" source="XsvZXBz9a4h5eeezJBc0-60" target="XsvZXBz9a4h5eeezJBc0-15" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XsvZXBz9a4h5eeezJBc0-60" value="Kafka" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;rotation=30;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="600" y="1602.5" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="XsvZXBz9a4h5eeezJBc0-64" value="For students DB" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fontSize=20;" parent="1" vertex="1">
+          <mxGeometry x="1570" y="1710" width="80" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="XsvZXBz9a4h5eeezJBc0-65" value="" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="XsvZXBz9a4h5eeezJBc0-52" target="XsvZXBz9a4h5eeezJBc0-64" edge="1">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="1550" y="1960" as="sourcePoint" />
+            <mxPoint x="1650" y="1860" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XsvZXBz9a4h5eeezJBc0-69" value="Cache" style="rhombus;whiteSpace=wrap;html=1;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="1800" y="1447.5" width="110" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="XsvZXBz9a4h5eeezJBc0-70" value="" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" parent="1" source="XsvZXBz9a4h5eeezJBc0-38" target="XsvZXBz9a4h5eeezJBc0-69" edge="1">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="1820" y="1740" as="sourcePoint" />
+            <mxPoint x="1920" y="1640" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XsvZXBz9a4h5eeezJBc0-71" value="" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=1;entryDx=0;entryDy=0;" parent="1" source="XsvZXBz9a4h5eeezJBc0-57" target="XsvZXBz9a4h5eeezJBc0-69" edge="1">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="1760" y="1730" as="sourcePoint" />
+            <mxPoint x="1860" y="1630" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XsvZXBz9a4h5eeezJBc0-72" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Cache&lt;/h1&gt;&lt;div&gt;Так как расписание о колосах и им подобных, а также в целом о расписании будет подгружаться первым, то его надо хранить в cache чтобы не нагружать бд&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="1920" y="1420" width="180" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="XsvZXBz9a4h5eeezJBc0-77" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Usos Service Impl&lt;/h1&gt;&lt;div&gt;(Временное название)&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Сервис, который будет иметь весь функционал усоса. Может немного изменённый.&amp;nbsp;&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="1030" y="1800" width="180" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="XsvZXBz9a4h5eeezJBc0-85" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fillColor=#fa6800;strokeColor=#C73500;strokeWidth=3;" parent="1" source="XsvZXBz9a4h5eeezJBc0-79" target="XsvZXBz9a4h5eeezJBc0-84" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XsvZXBz9a4h5eeezJBc0-79" value="&lt;font style=&quot;font-size: 21px;&quot;&gt;Schedule Moodle Notification Service&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="2020" y="1210" width="130" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="XsvZXBz9a4h5eeezJBc0-82" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Schedule Moodle Notification Service&lt;/h1&gt;&lt;div&gt;Сервис отвечает за напоминание пользователю когда у него колос или тому подобное мероприятие стоит в расписании&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="2160" y="1140" width="180" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="XsvZXBz9a4h5eeezJBc0-86" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;fillColor=#fa6800;strokeColor=#C73500;strokeWidth=3;" parent="1" source="XsvZXBz9a4h5eeezJBc0-84" target="XsvZXBz9a4h5eeezJBc0-28" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1760" y="1310" />
+              <mxPoint x="1430" y="1310" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XsvZXBz9a4h5eeezJBc0-84" value="Kafka" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;rotation=0;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="1750" y="1290" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="DhaoG3xxM838QycgmAT9-1" value="Users" style="whiteSpace=wrap;html=1;aspect=fixed;fontSize=23;" parent="1" vertex="1">
+          <mxGeometry y="-650" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="DhaoG3xxM838QycgmAT9-2" value="Authorization service" style="rounded=1;whiteSpace=wrap;html=1;fontSize=19;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="150" y="-640" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="DhaoG3xxM838QycgmAT9-3" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="DhaoG3xxM838QycgmAT9-1" target="DhaoG3xxM838QycgmAT9-2" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="110" y="-490" as="sourcePoint" />
+            <mxPoint x="160" y="-540" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DhaoG3xxM838QycgmAT9-4" value="Users&lt;br&gt;DB" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fontSize=20;" parent="1" vertex="1">
+          <mxGeometry x="340" y="-810" width="80" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="DhaoG3xxM838QycgmAT9-5" value="" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0;entryY=1;entryDx=0;entryDy=-15;entryPerimeter=0;exitX=1;exitY=0;exitDx=0;exitDy=0;" parent="1" source="DhaoG3xxM838QycgmAT9-2" target="DhaoG3xxM838QycgmAT9-4" edge="1">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="340" y="-550" as="sourcePoint" />
+            <mxPoint x="440" y="-650" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DhaoG3xxM838QycgmAT9-6" value="Security notification" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="320" y="-560" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="DhaoG3xxM838QycgmAT9-8" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" parent="1" source="DhaoG3xxM838QycgmAT9-2" target="DhaoG3xxM838QycgmAT9-6" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="380" y="-600" as="sourcePoint" />
+            <mxPoint x="430" y="-650" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DhaoG3xxM838QycgmAT9-9" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="DhaoG3xxM838QycgmAT9-2" target="DhaoG3xxM838QycgmAT9-10" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="480" y="-610" as="sourcePoint" />
+            <mxPoint x="530" y="-610" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DhaoG3xxM838QycgmAT9-10" value="Main Page Service" style="rounded=1;whiteSpace=wrap;html=1;fontSize=17;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="450" y="-640" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="DhaoG3xxM838QycgmAT9-12" value="Marks Service" style="rounded=0;whiteSpace=wrap;html=1;fontSize=17;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="640" y="-710" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="DhaoG3xxM838QycgmAT9-13" value="" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0;entryY=1;entryDx=0;entryDy=0;exitX=1;exitY=0;exitDx=0;exitDy=0;" parent="1" source="DhaoG3xxM838QycgmAT9-10" target="DhaoG3xxM838QycgmAT9-12" edge="1">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="610" y="-500" as="sourcePoint" />
+            <mxPoint x="710" y="-600" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DhaoG3xxM838QycgmAT9-14" value="Course Service" style="rounded=0;whiteSpace=wrap;html=1;fontSize=15;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="640" y="-630" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="DhaoG3xxM838QycgmAT9-15" value="" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="DhaoG3xxM838QycgmAT9-10" target="DhaoG3xxM838QycgmAT9-14" edge="1">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="600" y="-460" as="sourcePoint" />
+            <mxPoint x="700" y="-560" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DhaoG3xxM838QycgmAT9-16" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Marks Service&lt;/h1&gt;&lt;div&gt;Сервис, который отвечает за сборку всех последних выставленных оценок авторизированному пользователю. Собирает их в список в котором будет название предмета, тип (за что оценка - справджян, карткувка, колос, экзамен. Сделать для каждого типа разную подсветку).&amp;nbsp;&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="540" y="-970" width="270" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="DhaoG3xxM838QycgmAT9-18" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Запрос на БД&lt;/h1&gt;&lt;div&gt;Делает запрос на БД чтобы получить инфу есть ли данный пользователь в БД.&amp;nbsp;&lt;br&gt;&lt;br&gt;Если есть - авторизация&lt;br&gt;&lt;/div&gt;&lt;div&gt;Если нет - регистрация&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="120" y="-840" width="180" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="DhaoG3xxM838QycgmAT9-19" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Security notification&lt;/h1&gt;&lt;div&gt;Часть сервиса нотификаций которая отвечает за отправку пользователю уведомления, что на его аккаунт был совершён вход.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Отправлять пользователю:&lt;/div&gt;&lt;div&gt;1. Версия и название системы&lt;/div&gt;&lt;div&gt;2. Время когда был вход&lt;/div&gt;&lt;div&gt;3. IP адрес&lt;/div&gt;&lt;div&gt;4. С какой страны и города (если будет возможно реализовать)&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="120" y="-540" width="180" height="270" as="geometry" />
+        </mxCell>
+        <mxCell id="DhaoG3xxM838QycgmAT9-20" value="Schedule Service" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=18;" parent="1" vertex="1">
+          <mxGeometry x="940" y="-670" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="DhaoG3xxM838QycgmAT9-22" value="Casual&amp;nbsp;&lt;div&gt;Schedule&lt;/div&gt;&lt;div&gt;DB&lt;/div&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fontSize=20;" parent="1" vertex="1">
+          <mxGeometry x="1540" y="-810" width="90" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="DhaoG3xxM838QycgmAT9-24" value="Casual Schedule Service" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+          <mxGeometry x="1140" y="-730" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="DhaoG3xxM838QycgmAT9-25" value="Events Schedule Service" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+          <mxGeometry x="1140" y="-610" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="DhaoG3xxM838QycgmAT9-26" value="Events Schedule&lt;div&gt;DB&lt;/div&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fontSize=20;" parent="1" vertex="1">
+          <mxGeometry x="1540" y="-610" width="90" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="DhaoG3xxM838QycgmAT9-27" value="CRUD Mechanisms" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="1340" y="-750" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="DhaoG3xxM838QycgmAT9-28" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="DhaoG3xxM838QycgmAT9-24" target="DhaoG3xxM838QycgmAT9-27" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1270" y="-640" as="sourcePoint" />
+            <mxPoint x="1320" y="-690" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DhaoG3xxM838QycgmAT9-29" value="" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=82.5;entryPerimeter=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="DhaoG3xxM838QycgmAT9-27" target="DhaoG3xxM838QycgmAT9-22" edge="1">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="1500" y="-580" as="sourcePoint" />
+            <mxPoint x="1600" y="-680" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DhaoG3xxM838QycgmAT9-30" value="CRUD Mechanisms" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="1330" y="-580" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="DhaoG3xxM838QycgmAT9-31" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="DhaoG3xxM838QycgmAT9-25" target="DhaoG3xxM838QycgmAT9-30" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1290" y="-320" as="sourcePoint" />
+            <mxPoint x="1340" y="-370" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DhaoG3xxM838QycgmAT9-33" value="" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="DhaoG3xxM838QycgmAT9-30" target="DhaoG3xxM838QycgmAT9-26" edge="1">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="1440" y="-410" as="sourcePoint" />
+            <mxPoint x="1540" y="-510" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DhaoG3xxM838QycgmAT9-34" value="" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="DhaoG3xxM838QycgmAT9-20" target="DhaoG3xxM838QycgmAT9-24" edge="1">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="1040" y="-540" as="sourcePoint" />
+            <mxPoint x="1140" y="-640" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DhaoG3xxM838QycgmAT9-35" value="" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="DhaoG3xxM838QycgmAT9-20" target="DhaoG3xxM838QycgmAT9-25" edge="1">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="1060" y="-550" as="sourcePoint" />
+            <mxPoint x="1140" y="-610" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DhaoG3xxM838QycgmAT9-36" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Schedule Service&lt;/h1&gt;&lt;div&gt;Отвечает за загрузку расписания у авторизированного пользователя.&amp;nbsp;&lt;br&gt;&lt;br&gt;Casual Schedule Service - отвечает за загрузку обычного расписания у пользователя.&lt;br&gt;&lt;br&gt;Events Schedule Service - за загрузку всяких ивентов в расписание&amp;nbsp;&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="880" y="-900" width="230" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="DhaoG3xxM838QycgmAT9-37" value="" style="rounded=1;whiteSpace=wrap;html=1;fontSize=17;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="1210" y="-980" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="DhaoG3xxM838QycgmAT9-39" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="DhaoG3xxM838QycgmAT9-38" target="DhaoG3xxM838QycgmAT9-37" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="DhaoG3xxM838QycgmAT9-38" value="Название сервиса" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;" parent="1" vertex="1">
+          <mxGeometry x="1380" y="-975" width="80" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="DhaoG3xxM838QycgmAT9-40" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=17;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="1525" y="-980" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="DhaoG3xxM838QycgmAT9-42" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="DhaoG3xxM838QycgmAT9-41" target="DhaoG3xxM838QycgmAT9-40" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="DhaoG3xxM838QycgmAT9-41" value="К каким сервисам обращается" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;" parent="1" vertex="1">
+          <mxGeometry x="1700" y="-980" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="DhaoG3xxM838QycgmAT9-43" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+          <mxGeometry x="1880" y="-980" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="DhaoG3xxM838QycgmAT9-45" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="DhaoG3xxM838QycgmAT9-44" target="DhaoG3xxM838QycgmAT9-43" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="DhaoG3xxM838QycgmAT9-44" value="На какие сервисы разбивается" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;" parent="1" vertex="1">
+          <mxGeometry x="2050" y="-985" width="130" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="DhaoG3xxM838QycgmAT9-46" value="Course Service" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=18;" parent="1" vertex="1">
+          <mxGeometry x="530" y="-370" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="DhaoG3xxM838QycgmAT9-47" value="CRUD Mechanisms" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="730" y="-370" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="DhaoG3xxM838QycgmAT9-49" value="Course&amp;nbsp;&lt;div&gt;DB&lt;/div&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fontSize=20;" parent="1" vertex="1">
+          <mxGeometry x="920" y="-400" width="90" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="DhaoG3xxM838QycgmAT9-50" value="" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="DhaoG3xxM838QycgmAT9-46" target="DhaoG3xxM838QycgmAT9-47" edge="1">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="620" y="-150" as="sourcePoint" />
+            <mxPoint x="720" y="-250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DhaoG3xxM838QycgmAT9-51" value="" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="DhaoG3xxM838QycgmAT9-47" target="DhaoG3xxM838QycgmAT9-49" edge="1">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="860" y="-180" as="sourcePoint" />
+            <mxPoint x="960" y="-280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DhaoG3xxM838QycgmAT9-52" value="Sprawdziany Service" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=18;" parent="1" vertex="1">
+          <mxGeometry x="1180" y="-370" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="DhaoG3xxM838QycgmAT9-53" value="CRUD Mechanisms" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="1390" y="-370" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="DhaoG3xxM838QycgmAT9-54" value="Sprawdziany DB" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fontSize=20;" parent="1" vertex="1">
+          <mxGeometry x="1600" y="-400" width="150" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="DhaoG3xxM838QycgmAT9-55" value="" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="DhaoG3xxM838QycgmAT9-52" target="DhaoG3xxM838QycgmAT9-53" edge="1">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="1140" y="-150" as="sourcePoint" />
+            <mxPoint x="1240" y="-250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DhaoG3xxM838QycgmAT9-56" value="" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="DhaoG3xxM838QycgmAT9-53" target="DhaoG3xxM838QycgmAT9-54" edge="1">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="1420" y="-110" as="sourcePoint" />
+            <mxPoint x="1520" y="-210" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DhaoG3xxM838QycgmAT9-57" value="Marks Service&amp;nbsp;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=18;" parent="1" vertex="1">
+          <mxGeometry x="1730" y="-680" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="DhaoG3xxM838QycgmAT9-59" value="Sprawdziany DB" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fontSize=20;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="1920" y="-810" width="150" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="DhaoG3xxM838QycgmAT9-60" value="Course&amp;nbsp;&lt;div&gt;DB&lt;/div&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fontSize=20;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="1950" y="-660" width="90" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="DhaoG3xxM838QycgmAT9-62" value="" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;" parent="1" source="DhaoG3xxM838QycgmAT9-57" target="DhaoG3xxM838QycgmAT9-59" edge="1">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="1840" y="-670" as="sourcePoint" />
+            <mxPoint x="1790" y="-570" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DhaoG3xxM838QycgmAT9-63" value="" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0.75;exitDx=0;exitDy=0;" parent="1" source="DhaoG3xxM838QycgmAT9-57" target="DhaoG3xxM838QycgmAT9-60" edge="1">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="1780" y="-400" as="sourcePoint" />
+            <mxPoint x="1880" y="-500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
