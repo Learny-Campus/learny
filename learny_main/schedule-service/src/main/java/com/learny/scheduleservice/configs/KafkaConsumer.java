@@ -34,5 +34,7 @@ public class KafkaConsumer {
         kafkaTemplate.send("teacher-auth-token", username, "request_token");
     }
 
-    public void cleanReceivedToken() { this.receivedToken = null;}
+    public void cleanReceivedToken() {
+        this.receivedToken = null;
+    }
 }
