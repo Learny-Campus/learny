@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - RequestFilterTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>RequestFilterTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.example.authservice.configs.html">com.example.authservice.configs</a> &gt; RequestFilterTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">2</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">2</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">1.168s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox failures" id="successRate">
+<div class="percent">0%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Failed tests</a>
+</li>
+<li>
+<a href="#tab1">Tests</a>
+</li>
+<li>
+<a href="#tab2">Standard output</a>
+</li>
+<li>
+<a href="#tab3">Standard error</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="testListenStudentRequest()"></a>
+<h3 class="failures">testListenStudentRequest()</h3>
+<span class="code">
+<pre>Wanted but not invoked:
+org.springframework.kafka.core.KafkaTemplate#0 bean.send(
+    &quot;student-token-response&quot;,
+    &lt;Capturing argument: String&gt;,
+    &lt;Capturing argument: String&gt;
+);
+-&gt; at org.springframework.kafka.core.KafkaTemplate.send(KafkaTemplate.java:555)
+
+However, there was exactly 1 interaction with this mock:
+org.springframework.kafka.core.KafkaTemplate#0 bean.afterSingletonsInstantiated();
+-&gt; at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:986)
+
+
+	at app//org.springframework.kafka.core.KafkaTemplate.send(KafkaTemplate.java:555)
+	at app//com.example.authservice.configs.RequestFilterTest.testListenStudentRequest(RequestFilterTest.java:54)
+	at java.base@21.0.1/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base@21.0.1/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base@21.0.1/java.util.ArrayList.forEach(ArrayList.java:1596)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="testListenTeacherRequest()"></a>
+<h3 class="failures">testListenTeacherRequest()</h3>
+<span class="code">
+<pre>Wanted but not invoked:
+org.springframework.kafka.core.KafkaTemplate#0 bean.send(
+    &quot;teacher-token-response&quot;,
+    &lt;Capturing argument: String&gt;,
+    &lt;Capturing argument: String&gt;
+);
+-&gt; at org.springframework.kafka.core.KafkaTemplate.send(KafkaTemplate.java:555)
+
+However, there was exactly 1 interaction with this mock:
+org.springframework.kafka.core.KafkaTemplate#0 bean.afterSingletonsInstantiated();
+-&gt; at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:986)
+
+
+	at app//org.springframework.kafka.core.KafkaTemplate.send(KafkaTemplate.java:555)
+	at app//com.example.authservice.configs.RequestFilterTest.testListenTeacherRequest(RequestFilterTest.java:76)
+	at java.base@21.0.1/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base@21.0.1/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base@21.0.1/java.util.ArrayList.forEach(ArrayList.java:1596)
+</pre>
+</span>
+</div>
+</div>
+<div id="tab1" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="failures">testListenStudentRequest()</td>
+<td class="failures">0.530s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">testListenTeacherRequest()</td>
+<td class="failures">0.638s</td>
+<td class="failures">failed</td>
+</tr>
+</table>
+</div>
+<div id="tab2" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>16:13:21.950 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.authservice.configs.RequestFilterTest]: RequestFilterTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+16:13:22.050 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.authservice.AuthServiceApplication for test class com.example.authservice.configs.RequestFilterTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.1)
+
+2024-07-14T16:13:22.370+02:00  INFO 20476 --- [    Test worker] c.e.a.configs.RequestFilterTest          : Starting RequestFilterTest using Java 21.0.1 with PID 20476 (started by azmat in D:\Programing\Java\learny\learny_main\auth-service)
+2024-07-14T16:13:22.371+02:00  INFO 20476 --- [    Test worker] c.e.a.configs.RequestFilterTest          : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2024-07-14T16:13:22.890+02:00  INFO 20476 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-14T16:13:22.939+02:00  INFO 20476 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 42 ms. Found 2 JPA repository interfaces.
+2024-07-14T16:13:24.818+02:00  INFO 20476 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-14T16:13:24.972+02:00  INFO 20476 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-07-14T16:13:25.046+02:00  INFO 20476 --- [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-07-14T16:13:25.186+02:00  INFO 20476 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-14T16:13:25.207+02:00  INFO 20476 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-07-14T16:13:25.360+02:00  INFO 20476 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@d271d6c
+2024-07-14T16:13:25.362+02:00  INFO 20476 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-07-14T16:13:26.335+02:00  INFO 20476 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-14T16:13:26.419+02:00  INFO 20476 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-14T16:13:26.569+02:00  INFO 20476 --- [    Test worker] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2024-07-14T16:13:26.571+02:00  WARN 20476 --- [    Test worker] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-07-14T16:13:26.618+02:00  WARN 20476 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-07-14T16:13:27.920+02:00  INFO 20476 --- [    Test worker] o.a.k.clients.admin.AdminClientConfig    : AdminClientConfig values: 
+	auto.include.jmx.reporter = true
+	bootstrap.controllers = []
+	bootstrap.servers = [localhost:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	enable.metrics.push = true
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2024-07-14T16:13:28.035+02:00  INFO 20476 --- [    Test worker] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.7.0
+2024-07-14T16:13:28.035+02:00  INFO 20476 --- [    Test worker] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 2ae524ed625438c5
+2024-07-14T16:13:28.035+02:00  INFO 20476 --- [    Test worker] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1720966408034
+2024-07-14T16:13:28.250+02:00  INFO 20476 --- [| adminclient-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.admin.client for adminclient-1 unregistered
+2024-07-14T16:13:28.252+02:00  INFO 20476 --- [| adminclient-1] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2024-07-14T16:13:28.253+02:00  INFO 20476 --- [| adminclient-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2024-07-14T16:13:28.253+02:00  INFO 20476 --- [| adminclient-1] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2024-07-14T16:13:28.293+02:00  INFO 20476 --- [    Test worker] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-auth-service-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = auth-service
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2024-07-14T16:13:28.342+02:00  INFO 20476 --- [    Test worker] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2024-07-14T16:13:28.390+02:00  INFO 20476 --- [    Test worker] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.7.0
+2024-07-14T16:13:28.390+02:00  INFO 20476 --- [    Test worker] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 2ae524ed625438c5
+2024-07-14T16:13:28.390+02:00  INFO 20476 --- [    Test worker] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1720966408390
+2024-07-14T16:13:28.392+02:00  INFO 20476 --- [    Test worker] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-auth-service-1, groupId=auth-service] Subscribed to topic(s): student-token-request
+2024-07-14T16:13:28.398+02:00  INFO 20476 --- [    Test worker] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-auth-service-2
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = auth-service
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2024-07-14T16:13:28.402+02:00  INFO 20476 --- [    Test worker] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2024-07-14T16:13:28.407+02:00  INFO 20476 --- [    Test worker] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.7.0
+2024-07-14T16:13:28.408+02:00  INFO 20476 --- [    Test worker] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 2ae524ed625438c5
+2024-07-14T16:13:28.408+02:00  INFO 20476 --- [    Test worker] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1720966408407
+2024-07-14T16:13:28.408+02:00  INFO 20476 --- [    Test worker] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-auth-service-2, groupId=auth-service] Subscribed to topic(s): teacher-token-request
+2024-07-14T16:13:28.416+02:00  INFO 20476 --- [    Test worker] c.e.a.configs.RequestFilterTest          : Started RequestFilterTest in 6.266 seconds (process running for 7.172)
+2024-07-14T16:13:28.426+02:00  INFO 20476 --- [ntainer#1-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-auth-service-2, groupId=auth-service] Cluster ID: 2oUaD2TQSy6SdmWMCUqzqA
+2024-07-14T16:13:28.429+02:00  INFO 20476 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-auth-service-2, groupId=auth-service] Discovered group coordinator host.docker.internal:9092 (id: 2147483647 rack: null)
+2024-07-14T16:13:28.430+02:00  INFO 20476 --- [ntainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-auth-service-1, groupId=auth-service] Cluster ID: 2oUaD2TQSy6SdmWMCUqzqA
+2024-07-14T16:13:28.431+02:00  INFO 20476 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-auth-service-2, groupId=auth-service] (Re-)joining group
+2024-07-14T16:13:28.431+02:00  INFO 20476 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-auth-service-1, groupId=auth-service] Discovered group coordinator host.docker.internal:9092 (id: 2147483647 rack: null)
+2024-07-14T16:13:28.431+02:00  INFO 20476 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-auth-service-1, groupId=auth-service] (Re-)joining group
+2024-07-14T16:13:28.453+02:00  INFO 20476 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-auth-service-1, groupId=auth-service] Request joining group due to: need to re-join with the given member-id: consumer-auth-service-1-5ab2a10c-2e28-496b-9f7e-61745dcaa951
+2024-07-14T16:13:28.453+02:00  INFO 20476 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-auth-service-2, groupId=auth-service] Request joining group due to: need to re-join with the given member-id: consumer-auth-service-2-f1776ec2-3ced-4577-905a-27b0eed93a9c
+2024-07-14T16:13:28.453+02:00  INFO 20476 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-auth-service-2, groupId=auth-service] (Re-)joining group
+2024-07-14T16:13:28.453+02:00  INFO 20476 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-auth-service-1, groupId=auth-service] (Re-)joining group
+2024-07-14T16:13:28.456+02:00  INFO 20476 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-auth-service-1, groupId=auth-service] Successfully joined group with generation Generation{generationId=87, memberId='consumer-auth-service-1-5ab2a10c-2e28-496b-9f7e-61745dcaa951', protocol='range'}
+2024-07-14T16:13:28.456+02:00  INFO 20476 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-auth-service-2, groupId=auth-service] Successfully joined group with generation Generation{generationId=87, memberId='consumer-auth-service-2-f1776ec2-3ced-4577-905a-27b0eed93a9c', protocol='range'}
+2024-07-14T16:13:28.481+02:00  INFO 20476 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-auth-service-1, groupId=auth-service] Finished assignment for group at generation 87: {consumer-auth-service-1-5ab2a10c-2e28-496b-9f7e-61745dcaa951=Assignment(partitions=[student-token-request-0]), consumer-auth-service-2-f1776ec2-3ced-4577-905a-27b0eed93a9c=Assignment(partitions=[teacher-token-request-0])}
+2024-07-14T16:13:28.490+02:00  INFO 20476 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-auth-service-2, groupId=auth-service] Successfully synced group in generation Generation{generationId=87, memberId='consumer-auth-service-2-f1776ec2-3ced-4577-905a-27b0eed93a9c', protocol='range'}
+2024-07-14T16:13:28.490+02:00  INFO 20476 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-auth-service-1, groupId=auth-service] Successfully synced group in generation Generation{generationId=87, memberId='consumer-auth-service-1-5ab2a10c-2e28-496b-9f7e-61745dcaa951', protocol='range'}
+2024-07-14T16:13:28.491+02:00  INFO 20476 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-auth-service-1, groupId=auth-service] Notifying assignor about the new Assignment(partitions=[student-token-request-0])
+2024-07-14T16:13:28.491+02:00  INFO 20476 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-auth-service-2, groupId=auth-service] Notifying assignor about the new Assignment(partitions=[teacher-token-request-0])
+2024-07-14T16:13:28.498+02:00  INFO 20476 --- [ntainer#1-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-auth-service-2, groupId=auth-service] Adding newly assigned partitions: teacher-token-request-0
+2024-07-14T16:13:28.498+02:00  INFO 20476 --- [ntainer#0-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-auth-service-1, groupId=auth-service] Adding newly assigned partitions: student-token-request-0
+2024-07-14T16:13:28.521+02:00  INFO 20476 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerUtils        : Setting offset for partition student-token-request-0 to the committed offset FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[host.docker.internal:9092 (id: 0 rack: null)], epoch=0}}
+2024-07-14T16:13:28.521+02:00  INFO 20476 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerUtils        : Setting offset for partition teacher-token-request-0 to the committed offset FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[host.docker.internal:9092 (id: 0 rack: null)], epoch=0}}
+2024-07-14T16:13:28.523+02:00  INFO 20476 --- [ntainer#1-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : auth-service: partitions assigned: [teacher-token-request-0]
+2024-07-14T16:13:28.523+02:00  INFO 20476 --- [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : auth-service: partitions assigned: [student-token-request-0]
+2024-07-14T16:13:28.558+02:00  INFO 20476 --- [ntainer#0-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-auth-service-1, groupId=auth-service] Revoke previously assigned partitions student-token-request-0
+2024-07-14T16:13:28.558+02:00  INFO 20476 --- [ntainer#1-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-auth-service-2, groupId=auth-service] Revoke previously assigned partitions teacher-token-request-0
+2024-07-14T16:13:28.559+02:00  INFO 20476 --- [ntainer#1-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : auth-service: partitions revoked: [teacher-token-request-0]
+2024-07-14T16:13:28.559+02:00  INFO 20476 --- [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : auth-service: partitions revoked: [student-token-request-0]
+2024-07-14T16:13:28.560+02:00  INFO 20476 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-auth-service-1, groupId=auth-service] Member consumer-auth-service-1-5ab2a10c-2e28-496b-9f7e-61745dcaa951 sending LeaveGroup request to coordinator host.docker.internal:9092 (id: 2147483647 rack: null) due to the consumer unsubscribed from all topics
+2024-07-14T16:13:28.560+02:00  INFO 20476 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-auth-service-2, groupId=auth-service] Member consumer-auth-service-2-f1776ec2-3ced-4577-905a-27b0eed93a9c sending LeaveGroup request to coordinator host.docker.internal:9092 (id: 2147483647 rack: null) due to the consumer unsubscribed from all topics
+2024-07-14T16:13:28.561+02:00  INFO 20476 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-auth-service-2, groupId=auth-service] Resetting generation and member id due to: consumer pro-actively leaving the group
+2024-07-14T16:13:28.561+02:00  INFO 20476 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-auth-service-1, groupId=auth-service] Resetting generation and member id due to: consumer pro-actively leaving the group
+2024-07-14T16:13:28.561+02:00  INFO 20476 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-auth-service-2, groupId=auth-service] Request joining group due to: consumer pro-actively leaving the group
+2024-07-14T16:13:28.561+02:00  INFO 20476 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-auth-service-1, groupId=auth-service] Request joining group due to: consumer pro-actively leaving the group
+2024-07-14T16:13:28.561+02:00  INFO 20476 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-auth-service-2, groupId=auth-service] Unsubscribed all topics or patterns and assigned partitions
+2024-07-14T16:13:28.561+02:00  INFO 20476 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-auth-service-1, groupId=auth-service] Unsubscribed all topics or patterns and assigned partitions
+2024-07-14T16:13:28.563+02:00  INFO 20476 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-auth-service-1, groupId=auth-service] Resetting generation and member id due to: consumer pro-actively leaving the group
+2024-07-14T16:13:28.565+02:00  INFO 20476 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-auth-service-2, groupId=auth-service] Resetting generation and member id due to: consumer pro-actively leaving the group
+2024-07-14T16:13:28.565+02:00  INFO 20476 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-auth-service-1, groupId=auth-service] Request joining group due to: consumer pro-actively leaving the group
+2024-07-14T16:13:28.565+02:00  INFO 20476 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-auth-service-2, groupId=auth-service] Request joining group due to: consumer pro-actively leaving the group
+2024-07-14T16:13:29.053+02:00  INFO 20476 --- [ntainer#0-0-C-1] o.a.kafka.clients.FetchSessionHandler    : [Consumer clientId=consumer-auth-service-1, groupId=auth-service] Node 0 sent an invalid full fetch response with extraIds=(8qHvkT2eSlS25-5qbe2thg), response=()
+2024-07-14T16:13:29.053+02:00  INFO 20476 --- [ntainer#1-0-C-1] o.a.kafka.clients.FetchSessionHandler    : [Consumer clientId=consumer-auth-service-2, groupId=auth-service] Node 0 sent an invalid full fetch response with extraIds=(f89TsND3SP2VdqcwnKANfA), response=()
+2024-07-14T16:13:29.055+02:00  INFO 20476 --- [ntainer#1-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2024-07-14T16:13:29.055+02:00  INFO 20476 --- [ntainer#1-0-C-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2024-07-14T16:13:29.055+02:00  INFO 20476 --- [ntainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2024-07-14T16:13:29.055+02:00  INFO 20476 --- [ntainer#1-0-C-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2024-07-14T16:13:29.055+02:00  INFO 20476 --- [ntainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2024-07-14T16:13:29.055+02:00  INFO 20476 --- [ntainer#1-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2024-07-14T16:13:29.055+02:00  INFO 20476 --- [ntainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2024-07-14T16:13:29.055+02:00  INFO 20476 --- [ntainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2024-07-14T16:13:29.062+02:00  INFO 20476 --- [ntainer#0-0-C-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.consumer for consumer-auth-service-1 unregistered
+2024-07-14T16:13:29.062+02:00  INFO 20476 --- [ntainer#1-0-C-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.consumer for consumer-auth-service-2 unregistered
+2024-07-14T16:13:29.063+02:00  INFO 20476 --- [ntainer#1-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : auth-service: Consumer stopped
+2024-07-14T16:13:29.063+02:00  INFO 20476 --- [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : auth-service: Consumer stopped
+2024-07-14T16:13:29.066+02:00  INFO 20476 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-14T16:13:29.071+02:00  INFO 20476 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-07-14T16:13:29.077+02:00  INFO 20476 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.1)
+
+2024-07-14T16:13:29.116+02:00  INFO 20476 --- [    Test worker] c.e.a.configs.RequestFilterTest          : Starting RequestFilterTest using Java 21.0.1 with PID 20476 (started by azmat in D:\Programing\Java\learny\learny_main\auth-service)
+2024-07-14T16:13:29.116+02:00  INFO 20476 --- [    Test worker] c.e.a.configs.RequestFilterTest          : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2024-07-14T16:13:29.296+02:00  INFO 20476 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-14T16:13:29.306+02:00  INFO 20476 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 2 JPA repository interfaces.
+2024-07-14T16:13:29.386+02:00  INFO 20476 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-14T16:13:29.388+02:00  INFO 20476 --- [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-07-14T16:13:29.393+02:00  INFO 20476 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-14T16:13:29.393+02:00  INFO 20476 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2024-07-14T16:13:29.428+02:00  INFO 20476 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@22263e1a
+2024-07-14T16:13:29.431+02:00  INFO 20476 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2024-07-14T16:13:29.490+02:00  INFO 20476 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-14T16:13:29.540+02:00  INFO 20476 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-14T16:13:29.562+02:00  INFO 20476 --- [    Test worker] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2024-07-14T16:13:29.562+02:00  WARN 20476 --- [    Test worker] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-07-14T16:13:29.573+02:00  WARN 20476 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-07-14T16:13:29.695+02:00  INFO 20476 --- [    Test worker] o.a.k.clients.admin.AdminClientConfig    : AdminClientConfig values: 
+	auto.include.jmx.reporter = true
+	bootstrap.controllers = []
+	bootstrap.servers = [localhost:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	enable.metrics.push = true
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2024-07-14T16:13:29.699+02:00  INFO 20476 --- [    Test worker] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.7.0
+2024-07-14T16:13:29.700+02:00  INFO 20476 --- [    Test worker] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 2ae524ed625438c5
+2024-07-14T16:13:29.700+02:00  INFO 20476 --- [    Test worker] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1720966409699
+2024-07-14T16:13:29.713+02:00  INFO 20476 --- [| adminclient-2] o.a.kafka.common.utils.AppInfoParser     : App info kafka.admin.client for adminclient-2 unregistered
+2024-07-14T16:13:29.714+02:00  INFO 20476 --- [| adminclient-2] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2024-07-14T16:13:29.714+02:00  INFO 20476 --- [| adminclient-2] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2024-07-14T16:13:29.714+02:00  INFO 20476 --- [| adminclient-2] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2024-07-14T16:13:29.716+02:00  INFO 20476 --- [    Test worker] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-auth-service-3
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = auth-service
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2024-07-14T16:13:29.716+02:00  INFO 20476 --- [    Test worker] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2024-07-14T16:13:29.722+02:00  INFO 20476 --- [    Test worker] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.7.0
+2024-07-14T16:13:29.722+02:00  INFO 20476 --- [    Test worker] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 2ae524ed625438c5
+2024-07-14T16:13:29.722+02:00  INFO 20476 --- [    Test worker] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1720966409722
+2024-07-14T16:13:29.722+02:00  INFO 20476 --- [    Test worker] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-auth-service-3, groupId=auth-service] Subscribed to topic(s): student-token-request
+2024-07-14T16:13:29.723+02:00  INFO 20476 --- [    Test worker] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-auth-service-4
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = auth-service
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2024-07-14T16:13:29.725+02:00  INFO 20476 --- [    Test worker] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2024-07-14T16:13:29.728+02:00  INFO 20476 --- [ntainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-auth-service-3, groupId=auth-service] Cluster ID: 2oUaD2TQSy6SdmWMCUqzqA
+2024-07-14T16:13:29.729+02:00  INFO 20476 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-auth-service-3, groupId=auth-service] Discovered group coordinator host.docker.internal:9092 (id: 2147483647 rack: null)
+2024-07-14T16:13:29.730+02:00  INFO 20476 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-auth-service-3, groupId=auth-service] (Re-)joining group
+2024-07-14T16:13:29.730+02:00  INFO 20476 --- [    Test worker] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.7.0
+2024-07-14T16:13:29.730+02:00  INFO 20476 --- [    Test worker] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 2ae524ed625438c5
+2024-07-14T16:13:29.730+02:00  INFO 20476 --- [    Test worker] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1720966409730
+2024-07-14T16:13:29.731+02:00  INFO 20476 --- [    Test worker] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-auth-service-4, groupId=auth-service] Subscribed to topic(s): teacher-token-request
+2024-07-14T16:13:29.733+02:00  INFO 20476 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-auth-service-3, groupId=auth-service] Request joining group due to: need to re-join with the given member-id: consumer-auth-service-3-44c557bf-7a3f-4ce0-87a1-aed859286fd0
+2024-07-14T16:13:29.733+02:00  INFO 20476 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-auth-service-3, groupId=auth-service] (Re-)joining group
+2024-07-14T16:13:29.733+02:00  INFO 20476 --- [    Test worker] c.e.a.configs.RequestFilterTest          : Started RequestFilterTest in 0.643 seconds (process running for 8.49)
+2024-07-14T16:13:29.735+02:00  INFO 20476 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-auth-service-3, groupId=auth-service] Successfully joined group with generation Generation{generationId=89, memberId='consumer-auth-service-3-44c557bf-7a3f-4ce0-87a1-aed859286fd0', protocol='range'}
+2024-07-14T16:13:29.736+02:00  INFO 20476 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-auth-service-3, groupId=auth-service] Finished assignment for group at generation 89: {consumer-auth-service-3-44c557bf-7a3f-4ce0-87a1-aed859286fd0=Assignment(partitions=[student-token-request-0])}
+2024-07-14T16:13:29.736+02:00  INFO 20476 --- [ntainer#1-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-auth-service-4, groupId=auth-service] Cluster ID: 2oUaD2TQSy6SdmWMCUqzqA
+2024-07-14T16:13:29.736+02:00  INFO 20476 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-auth-service-4, groupId=auth-service] Discovered group coordinator host.docker.internal:9092 (id: 2147483647 rack: null)
+2024-07-14T16:13:29.737+02:00  INFO 20476 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-auth-service-4, groupId=auth-service] (Re-)joining group
+2024-07-14T16:13:29.738+02:00  INFO 20476 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-auth-service-3, groupId=auth-service] Successfully synced group in generation Generation{generationId=89, memberId='consumer-auth-service-3-44c557bf-7a3f-4ce0-87a1-aed859286fd0', protocol='range'}
+2024-07-14T16:13:29.738+02:00  INFO 20476 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-auth-service-3, groupId=auth-service] Notifying assignor about the new Assignment(partitions=[student-token-request-0])
+2024-07-14T16:13:29.738+02:00  INFO 20476 --- [ntainer#0-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-auth-service-3, groupId=auth-service] Adding newly assigned partitions: student-token-request-0
+2024-07-14T16:13:29.740+02:00  INFO 20476 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-auth-service-4, groupId=auth-service] Request joining group due to: need to re-join with the given member-id: consumer-auth-service-4-5b8ac9ba-2138-4128-b33a-ac274f414e68
+2024-07-14T16:13:29.740+02:00  INFO 20476 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-auth-service-4, groupId=auth-service] (Re-)joining group
+2024-07-14T16:13:29.741+02:00  INFO 20476 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerUtils        : Setting offset for partition student-token-request-0 to the committed offset FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[host.docker.internal:9092 (id: 0 rack: null)], epoch=0}}
+2024-07-14T16:13:29.741+02:00  INFO 20476 --- [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : auth-service: partitions assigned: [student-token-request-0]
+2024-07-14T16:13:29.748+02:00  INFO 20476 --- [ntainer#0-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-auth-service-3, groupId=auth-service] Revoke previously assigned partitions student-token-request-0
+2024-07-14T16:13:29.748+02:00  INFO 20476 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-auth-service-4, groupId=auth-service] Member consumer-auth-service-4-5b8ac9ba-2138-4128-b33a-ac274f414e68 sending LeaveGroup request to coordinator host.docker.internal:9092 (id: 2147483647 rack: null) due to the consumer unsubscribed from all topics
+2024-07-14T16:13:29.748+02:00  INFO 20476 --- [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : auth-service: partitions revoked: [student-token-request-0]
+2024-07-14T16:13:29.748+02:00  INFO 20476 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-auth-service-3, groupId=auth-service] Member consumer-auth-service-3-44c557bf-7a3f-4ce0-87a1-aed859286fd0 sending LeaveGroup request to coordinator host.docker.internal:9092 (id: 2147483647 rack: null) due to the consumer unsubscribed from all topics
+2024-07-14T16:13:29.748+02:00  INFO 20476 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-auth-service-3, groupId=auth-service] Resetting generation and member id due to: consumer pro-actively leaving the group
+2024-07-14T16:13:29.748+02:00  INFO 20476 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-auth-service-4, groupId=auth-service] Resetting generation and member id due to: consumer pro-actively leaving the group
+2024-07-14T16:13:29.748+02:00  INFO 20476 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-auth-service-3, groupId=auth-service] Request joining group due to: consumer pro-actively leaving the group
+2024-07-14T16:13:29.748+02:00  INFO 20476 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-auth-service-3, groupId=auth-service] Unsubscribed all topics or patterns and assigned partitions
+2024-07-14T16:13:29.748+02:00  INFO 20476 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-auth-service-4, groupId=auth-service] Request joining group due to: consumer pro-actively leaving the group
+2024-07-14T16:13:29.748+02:00  INFO 20476 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-auth-service-4, groupId=auth-service] Unsubscribed all topics or patterns and assigned partitions
+2024-07-14T16:13:29.748+02:00  INFO 20476 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-auth-service-4, groupId=auth-service] Resetting generation and member id due to: consumer pro-actively leaving the group
+2024-07-14T16:13:29.748+02:00  INFO 20476 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-auth-service-4, groupId=auth-service] Request joining group due to: consumer pro-actively leaving the group
+2024-07-14T16:13:29.748+02:00  INFO 20476 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-auth-service-3, groupId=auth-service] Resetting generation and member id due to: consumer pro-actively leaving the group
+2024-07-14T16:13:29.749+02:00  INFO 20476 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-auth-service-3, groupId=auth-service] Request joining group due to: consumer pro-actively leaving the group
+2024-07-14T16:13:29.752+02:00  INFO 20476 --- [ntainer#1-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2024-07-14T16:13:29.752+02:00  INFO 20476 --- [ntainer#1-0-C-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2024-07-14T16:13:29.752+02:00  INFO 20476 --- [ntainer#1-0-C-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2024-07-14T16:13:29.752+02:00  INFO 20476 --- [ntainer#1-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2024-07-14T16:13:29.753+02:00  INFO 20476 --- [ntainer#1-0-C-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.consumer for consumer-auth-service-4 unregistered
+2024-07-14T16:13:29.753+02:00  INFO 20476 --- [ntainer#1-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : auth-service: Consumer stopped
+2024-07-14T16:13:30.260+02:00  INFO 20476 --- [ntainer#0-0-C-1] o.a.kafka.clients.FetchSessionHandler    : [Consumer clientId=consumer-auth-service-3, groupId=auth-service] Node 0 sent an invalid full fetch response with extraIds=(8qHvkT2eSlS25-5qbe2thg), response=()
+2024-07-14T16:13:30.260+02:00  INFO 20476 --- [ntainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2024-07-14T16:13:30.260+02:00  INFO 20476 --- [ntainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2024-07-14T16:13:30.260+02:00  INFO 20476 --- [ntainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2024-07-14T16:13:30.261+02:00  INFO 20476 --- [ntainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2024-07-14T16:13:30.262+02:00  INFO 20476 --- [ntainer#0-0-C-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.consumer for consumer-auth-service-3 unregistered
+2024-07-14T16:13:30.262+02:00  INFO 20476 --- [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : auth-service: Consumer stopped
+2024-07-14T16:13:30.263+02:00  INFO 20476 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-14T16:13:30.263+02:00  INFO 20476 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2024-07-14T16:13:30.268+02:00  INFO 20476 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+</pre>
+</span>
+</div>
+<div id="tab3" class="tab">
+<h2>Standard error</h2>
+<span class="code">
+<pre>WARNING: A Java agent has been loaded dynamically (C:\Users\azmat\.gradle\caches\modules-2\files-2.1\net.bytebuddy\byte-buddy-agent\1.14.17\e3c251a39dc90badaf71c83427ba46840f219d8d\byte-buddy-agent-1.14.17.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 8.8</a> at 14 июл. 2024 г., 16:13:30</p>
+</div>
+</div>
+</body>
+</html>

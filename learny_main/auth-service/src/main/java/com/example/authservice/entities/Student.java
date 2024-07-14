@@ -12,7 +12,6 @@ import java.util.Objects;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
 @Table(name = "students")
 public class Student {
     @Id

@@ -45,6 +45,10 @@ dependencies {
     implementation group: 'org.glassfish.jaxb', name: 'jaxb-runtime', version: '3.0.1'
 }
 
+dependencies {
+    testImplementation group: 'org.instancio', name: 'instancio-junit', version: '4.8.0'
+}
+
 
 
 tasks.named('test') {
