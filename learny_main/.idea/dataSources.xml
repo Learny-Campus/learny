@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="learny_auth_service_db@localhost" uuid="3be81aff-3781-4a9f-a95b-1746091a5381">
+    <data-source source="LOCAL" name="learny_auth_service_db@localhost" uuid="818791b2-c727-4c90-a24b-bb0a02577d1f">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>

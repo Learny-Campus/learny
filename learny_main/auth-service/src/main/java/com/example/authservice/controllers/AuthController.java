@@ -19,6 +19,9 @@ public class AuthController {
     private final AuthService authService;
     private final KafkaProducer kafkaProducer;
 
+    //TODO: разобраться почему студенты могут авторизоваться как преподаватели и наоборот.
+
+
     @PostMapping("/registration/student")
     public ResponseEntity<?> registerStudent(@RequestBody StudentRegistrationDto studentRegistrationDto) {
         return authService.createUser("student", studentRegistrationDto);
@@ -31,17 +34,22 @@ public class AuthController {
 
     @PostMapping("/logging/student")
     public ResponseEntity<?> authenticateStudent(@RequestBody JwtRequest authRequest) {
-        ResponseEntity<?> response = authService.createAuthToken("student", authRequest);
-        if (response.getStatusCode().is2xxSuccessful() && response.getBody() instanceof JwtResponse) {
-            JwtResponse jwtResponse = (JwtResponse) response.getBody();
-            kafkaProducer.send(authRequest.getUsername(), jwtResponse.getToken());
-        }
-        return response;
+        authRequest.setRole("STUDENT");
+        return authenticateUser("student", authRequest);
     }
 
     @PostMapping("/logging/teacher")
     public ResponseEntity<?> authenticateTeacher(@RequestBody JwtRequest authRequest) {
-        return authService.createAuthToken("teacher", authRequest);
+        authRequest.setRole("TEACHER");
+        return authenticateUser("teacher", authRequest);
+    }
+
+    private ResponseEntity<?> authenticateUser(String expectedRole, JwtRequest authRequest) {
+        ResponseEntity<?> response = authService.createAuthToken(expectedRole, authRequest);
+        if (response.getStatusCode().is2xxSuccessful() && response.getBody() instanceof JwtResponse jwtResponse) {
+            kafkaProducer.send(authRequest.getUsername(), jwtResponse.getToken());
+        }
+        return response;
     }
 
     @GetMapping("/info")
