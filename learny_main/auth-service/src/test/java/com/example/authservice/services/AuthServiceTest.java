@@ -56,7 +56,7 @@ public class AuthServiceTest {
 
         Mockito.when(authenticationManager.authenticate(Mockito.any())).thenReturn(authentication);
         Mockito.when(authentication.getPrincipal()).thenReturn(userDetails);
-        Mockito.when(jwtStudentTokenUtils.generateStudentToken(userDetails, "STUDENT")).thenReturn(token);
+        Mockito.when(jwtStudentTokenUtils.generationStudentToken(userDetails, "STUDENT")).thenReturn(token);
 
         ResponseEntity<?> response = authService.createAuthToken("student", authRequest);
 

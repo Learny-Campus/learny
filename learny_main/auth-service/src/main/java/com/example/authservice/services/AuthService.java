@@ -4,6 +4,8 @@ import com.example.authservice.exceptions.AppError;
 import com.example.authservice.dtos.*;
 import com.example.authservice.entities.Student;
 import com.example.authservice.entities.Teacher;
+import com.example.authservice.repositories.StudentRepository;
+import com.example.authservice.repositories.TeacherRepository;
 import com.example.authservice.utils.JwtStudentTokenUtils;
 import com.example.authservice.utils.JwtTeacherTokenUtils;
 import lombok.RequiredArgsConstructor;
@@ -21,6 +23,8 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 @RequiredArgsConstructor
 public class AuthService {
@@ -29,39 +33,43 @@ public class AuthService {
     private final JwtTeacherTokenUtils jwtTeacherTokenUtils;
     private final AuthenticationManager authenticationManager;
     private final KafkaTemplate<String, String> kafkaTemplate;
+    private final StudentRepository studentRepository;
+    private final TeacherRepository teacherRepository;
 
     private static final Logger logger = LoggerFactory.getLogger(PerformanceMonitorInterceptor.class);
 
     public ResponseEntity<?> createAuthToken(String userType, JwtRequest authRequest) {
         try {
-            Authentication authentication = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(authRequest.getUsername(), authRequest.getPassword()));
-            SecurityContextHolder.getContext().setAuthentication(authentication);
-
-            UserDetails userDetails;
-            String token;
-            String role;
-            if ("student".equals(userType)) {
-                userDetails = (UserDetails) authentication.getPrincipal();
-                token = jwtStudentTokenUtils.generateStudentToken(userDetails, authRequest.getRole());
-                role = jwtStudentTokenUtils.getRoles(token).toString();
-                kafkaTemplate.send("student-token-response", authRequest.getUsername(), token);
-                kafkaTemplate.send("student-token-response", role);
-                logger.info("Student token: {} and role: {} sent successfully", token, role);
-            } else if ("teacher".equals(userType)) {
-                userDetails = (UserDetails) authentication.getPrincipal();
-                token = jwtTeacherTokenUtils.generateTeacherToken(userDetails, authRequest.getRole());
-                role = jwtTeacherTokenUtils.getRoles(token).toString();
-                kafkaTemplate.send("teacher-token-response", authRequest.getUsername(), token);
-                kafkaTemplate.send("teacher-token-response", role);
-                logger.info("Teacher token: {} and role: {} sent successfully", token, role);
-            } else {
-                return new ResponseEntity<>(new AppError(HttpStatus.BAD_REQUEST.value(), "Invalid user type"), HttpStatus.BAD_REQUEST);
-            }
-
-            return ResponseEntity.ok(new JwtResponse(token));
-        } catch (BadCredentialsException e) {
-            return new ResponseEntity<>(new AppError(HttpStatus.UNAUTHORIZED.value(), "Uncorrected login or password"), HttpStatus.UNAUTHORIZED);
+            authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(authRequest.getUsername(), authRequest.getPassword()));
+        } catch (BadCredentialsException ex) {
+            return new ResponseEntity<>(new AppError(HttpStatus.UNAUTHORIZED.value(), "Incorrect login or password"), HttpStatus.UNAUTHORIZED);
         }
+
+        UserDetails userDetails;
+        String token;
+
+        if("student".equalsIgnoreCase(userType)) {
+            Optional<Student> student = studentRepository.findStudentByUsername(authRequest.getUsername());
+            if (student.isPresent()) {
+                userDetails = userService.loadUserByUsername(authRequest.getUsername());
+                token = jwtStudentTokenUtils.generationStudentToken(userDetails);
+                kafkaTemplate.send("student-token-response", authRequest.getUsername(), token);
+            } else {
+                return new ResponseEntity<>(new AppError(HttpStatus.UNAUTHORIZED.value(), "User not found in student database"), HttpStatus.UNAUTHORIZED);
+            }
+        } else if ("teacher".equalsIgnoreCase(userType)) {
+            Optional<Teacher> teacher = teacherRepository.findTeacherByUsername(authRequest.getUsername());
+            if (teacher.isPresent()) {
+                userDetails = userService.loadUserByUsername(authRequest.getUsername());
+                token = jwtTeacherTokenUtils.generationTeacherToken(userDetails);
+                kafkaTemplate.send("teacher-token-response", authRequest.getUsername(), token);
+            } else {
+                return new ResponseEntity<>(new AppError(HttpStatus.UNAUTHORIZED.value(), "User not found in teacher database"), HttpStatus.UNAUTHORIZED);
+            }
+        } else {
+            return new ResponseEntity<>(new AppError(HttpStatus.BAD_REQUEST.value(), "Invalid user type"), HttpStatus.BAD_REQUEST);
+        }
+        return ResponseEntity.ok(new JwtResponse(token));
     }
 
     public ResponseEntity<?> createUser(String userType, Object registrationDto) {
